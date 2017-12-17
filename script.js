@@ -9,7 +9,7 @@ $(function(){
     	return str;
 	}
 
-	function Column(name){//dlaczego name jest tutaj parametrem, klasa jako funkcja?
+	function Column(name){
 		var self = this;
 
 		this.id = randomString();
