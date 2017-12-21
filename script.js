@@ -40,10 +40,10 @@ $(function() {
 
 				if (cardName === null) {
 					return;
+				} else if (cardName.length <= 0) {
+					self.addCard(new Card("Default"));
 				} else if (cardName) {
 					self.addCard(new Card(cardName));
-				} else if (cardName = " ") {
-					self.addCard(new Card("Default"));
 				}
 			});
 
@@ -144,10 +144,10 @@ $(function() {
 
 		if (name === null) {
 			return;
-		} else if ((name = " ")) {
+		} else if (name.length <= 0) {
 			var column = new Column("Default");
 			board.addColumn(column);
-		} else {
+		} else if (name) {
 			var column = new Column(name);
 			board.addColumn(column);
 		}
